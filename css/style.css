@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@1,500;1,700&display=swap');
+
+* {
+  font-family: 'Alegreya', serif;
+  font-size: 18px;
+}
+
+body {
+  background-color: #020c1b;
+  color: #e6f1ff;
+}
+
+nav a {
+  color: #6be34d;
+}
+
+nav a:hover {
+  color: white;
+}
+
+h1 {
+  color: #ccd6f6;
+}
