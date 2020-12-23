@@ -19,5 +19,53 @@ nav a:hover {
 }
 
 h1 {
+  color: #a8b2d1;
+}
+
+#resume {
+  border: 0.2px solid #6be34d;
+  color: #6be34d;
+}
+
+#resume:hover {
+  color: #6be34d;
+  border: 0.2px solid #fff;
+}
+
+.container p {
+  color: #6be34d;
+}
+
+.container h1 {
+  font-size: 80px;
   color: #ccd6f6;
+}
+
+.container h2 {
+  font-size: 80px;
+  color: #a8b2d1;
+}
+
+#social-links .nav-link {
+  color: #8892b0;
+}
+
+#social-links .nav-link:hover {
+  color: #6be34d;
+}
+
+.email a {
+  text-align: center;
+  color: #6be34d;
+  border: 0.2px solid #6be34d;
+  color: #6be34d;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.email a:hover {
+  color: #6be34d;
+  border: 0.2px solid #fff;
+  box-shadow: 1px 1px 1.5px white;
+
 }
