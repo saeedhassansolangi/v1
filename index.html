@@ -17,20 +17,19 @@
 <body>
 
   <!-- navigation -->
-  <nav class="navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg navbar-light" >
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><img src="./images/Frame 2@3x.png" width="80" alt=""></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id='toggle-button'>
+        <span class="navbar-toggler-icon" ></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="#">About</a>
-          <a class="nav-link" href="#">Education</a>
-          <a class="nav-link" href="#">Portfolio</a>
-          <a class="nav-link" href="#">Articles</a>
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link active" aria-current="page" href="#about">About</a>
+          <a class="nav-link" href="#education">Education</a>
+          <a class="nav-link" href="#portfolio">Portfolio</a>
+          <a class="nav-link" href="#articles">Articles</a>
+          <a class="nav-link" href="#contact">Contact</a>
           <a class="nav-link" href="./docs/resume.pdf" target="_blank" id="resume">Download Resume</a>
         </div>
       </div>
@@ -41,43 +40,178 @@
   <!--  -->
 
   <div class="container">
-    <div class="row mt-5">
-      <div class="col-md-11">
+
+    <div class="row mt-5" id="intro-section">
+      <div class="col-md-11 col-sm-6">
         <p>Hi, Iam </p>
         <h1>Saeed Hassan </h1>
         <h2>I build things for the web.</h2>
-        
+
         <div class="email mt-3 ml-5">
-          <a href="mailto:saeedhassansolangi@gmail.com" >Get in touch </a>
+          <a href="mailto:saeedhassansolangi@gmail.com">Get in touch </a>
         </div>
 
       </div>
 
-      <div class="col-md-1">
+      <div class="col-md-1" id="new">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="social-links">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#"><i class="fab fa-github"></i></a>
+            <a class="nav-link active" aria-current="page" href="https://github.com/saeedhassansolangi"><i class="fab fa-github"></i></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fab fa-facebook"></i></a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fab fa-twitter"></i></a>
-          </li>
-
-
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fab fa-linkedin"></i></a>
+            <a class="nav-link" href="https://web.facebook.com/SaeedBinIslam53/"><i class="fab fa-facebook"></i></a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="fab fa-instagram"></i></a>
+            <a class="nav-link" href="https://twitter.com/saeedhassan1753"><i class="fab fa-twitter"></i></a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.linkedin.com/in/saeedhassansolangi/"><i class="fab fa-linkedin"></i></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.instagram.com/saeed_hassan_solangi/"><i class="fab fa-instagram"></i></a>
           </li>
         </ul>
 
       </div>
     </div>
+
+
+    <div class="about" id="about">
+      <h3 id="about-header">About</h3>
+
+      <div class="row mt-5">
+        <div class="col-md-4" id="above">
+          <img src="./images/saeedhassan.jpeg" alt="" class="img-fluid">
+        </div>
+
+        <div class="col-md-8">
+
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam error soluta temporibus, hic accusamus
+            beatae, repellat sed, sapiente autem tempora cum culpa dignissimos ratione minus ducimus. Possimus corrupti
+            numquam nihil.</p>
+
+            <div class="skills">
+              <h4 style="border-bottom: white 2px solid; display: inline;">Skills</h4>
+
+              <div class="frontend-skills mt-3">
+                <h6>Frontend Skills</h6>
+                <p>Html, Css ,Bootstrap, Javacript, Reactjs</p>
+              </div>
+
+              <div class="backend-skills mt-3">
+                <h6>Backend Skills</h6>
+                <p>Nodejs , Deno , Express , Oak, Mongoose , Mongodb</p>
+              </div>
+            </div>
+            
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="education mt-2" id="education">
+
+      <h3 id="education-header">Education</h3>
+      <div class="row mt-5">
+
+        <div class="col-md-8">
+
+          <h4 >Mehran University of Engineering and Technology, Jamshoro </h3>
+            
+            
+        </div>
+
+        <div class="col-md-2">
+          <img src="./images/muet_logo.png" alt="image not found">
+        </div>
+
+      </div>
+
+      <div class="row mt-5">
+
+        <div class="col-md-8">
+          <h4>Sunny Bright High School Dadu</h3>
+        </div>
+
+        <div class="col-md-2">
+          <img src="./images/Sunny Bright Academy Logo.jpg"  width="100"id="images" alt="image not found">
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="portfolio mt-5" id="portfolio">
+
+      <h3 id="portfolio-header">Portfolio</h3>
+      <div class="col-md-12 mt-5">
+        <div class="card mb-3" class="cards" style="background-color: #172a45;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="./images/githubApi.png" alt="..."  style="max-width:100%; height:100%">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- second -->
+      <div class="col-md-12 mt-5">
+        <div class="card mb-3" class="cards" style="background-color: #172a45;">
+          <div class="row g-0">
+           
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <img src="./images/campground.png" alt="..." style="max-width:100%; height:100%">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="articles mt-5" id="articles">
+      <h3 id="articles-header mt-3">Articles</h3>
+      <p>No articles pusblished yet</p>
+    </div>
+
+    <div class="contact mt-5" id="contact">
+      <h3 id="contact-header" class="mt-3">Contact</h3>
+      <div class="row mt-3">
+        <div class="col-md-6">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos rem sit voluptatum vitae? Consequuntur ipsum quisquam quo eum maxime culpa non, aliquam doloribus explicabo corrupti ut nostrum ipsam odit alias?
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <!-- <div class="map">
+      <div style="width: 100%"><iframe scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Dadu%20,%20Sindh%20Pakistan+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="100%" height="600" frameborder="0"></iframe><a href="https://www.maps.ie/route-planner.htm">Road Trip Planner</a></div>
+    </div> -->
+
   </div>
 
 </body>

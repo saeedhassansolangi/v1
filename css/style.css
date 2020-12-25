@@ -11,7 +11,7 @@ body {
 }
 
 nav a {
-  color: #6be34d;
+  color: #6be34d !important;
 }
 
 nav a:hover {
@@ -67,5 +67,63 @@ h1 {
   color: #6be34d;
   border: 0.2px solid #fff;
   box-shadow: 1px 1px 1.5px white;
+}
 
+#intro-section {
+  height: 70vh;
+}
+
+#about-header,
+#education-header,
+#portfolio-header,
+#articles-header,
+#contact-header {
+  display: inline;
+  margin: 5px;
+  border-bottom: 2px solid white;
+}
+
+.about img {
+  max-width: 100%;
+  height: auto;
+  opacity: 0.7;
+  border-radius: 100%;
+}
+
+.about {
+  height: 100vh;
+}
+
+.education h4 {
+  margin-bottom: 80px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 70px !important;
+  }
+
+  h2 {
+    font-size: 40px !important;
+  }
+  .nav-item {
+    display: none;
+  }
+
+  .education {
+    margin-top: 400px !important;
+  }
+
+  #toggle-button {
+    background-color: #101c2e;
+  }
+}
+
+.cards {
+  max-width: 100%;
+  color: white;
+}
+
+.education h4::before {
+  content: '> ';
 }
