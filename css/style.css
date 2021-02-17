@@ -19,6 +19,13 @@ h6 {
   font-weight: 500;
 }
 
+#about,
+#skills,
+#education,
+#portfolio {
+  font-size: 50px;
+}
+
 nav a {
   color: #fff !important;
 }
@@ -113,13 +120,50 @@ nav a:hover {
   max-width: 100%;
   height: auto;
   opacity: 1;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
-.education h3 {
-  margin-bottom: 80px;
+#description {
+  margin-top: 80px;
 }
 
+.cards {
+  max-width: 100%;
+  color: white;
+}
+
+.footer {
+  text-align: center;
+  margin: 20px;
+}
+
+#social-links svg {
+  font-size: 30px;
+}
+
+.skills {
+  margin: 100px 0px;
+}
+
+.skills svg {
+  font-size: 80px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.skills svg:hover {
+  color: #6be34d;
+  cursor: pointer;
+}
+
+.education {
+  margin: 94px 0px;
+}
+
+#tools {
+  color: gray;
+}
+/* Design For Mo  */
 @media (max-width: 768px) {
   * {
     font-family: 'Quicksand', sans-serif;
@@ -142,13 +186,17 @@ nav a:hover {
     font-size: 40px;
   }
   h1 {
-    font-size: 50px !important;
+    font-size: 40px !important;
   }
 
   h2 {
     font-size: 30px !important;
   }
-  .nav-item {
+
+  #description {
+    margin-top: 2px;
+  }
+  #social-links .nav-item {
     display: none;
   }
 
@@ -159,14 +207,4 @@ nav a:hover {
   #toggle-button {
     background-color: #101c2e;
   }
-}
-
-.cards {
-  max-width: 100%;
-  color: white;
-}
-
-.footer {
-  text-align: center;
-  margin: 20px;
 }
