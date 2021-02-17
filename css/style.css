@@ -183,10 +183,6 @@ nav a:hover {
   cursor: pointer;
 }
 
-/* .education {
-  margin: 94px 0px;
-} */
-
 #tools {
   color: gray;
 }
@@ -206,11 +202,6 @@ nav a:hover {
   .email {
     margin-left: 0px;
     margin-top: 20px;
-  }
-
-  #about {
-    margin: 5px 20px;
-    font-size: 40px;
   }
 
   h1 {
