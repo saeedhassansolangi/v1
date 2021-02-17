@@ -5,6 +5,10 @@
   font-weight: 300;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #121212;
   color: #ffffff;
@@ -218,5 +222,11 @@ nav a:hover {
 
   #toggle-button {
     background-color: #101c2e;
+  }
+
+  .skills svg {
+    font-size: 45px;
+    padding: 10px;
+    margin: 10px;
   }
 }
