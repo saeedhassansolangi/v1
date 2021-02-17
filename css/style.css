@@ -66,12 +66,26 @@ nav a:hover {
 }
 
 .about-des {
-  margin: 50px;
+  margin: 10px;
 }
 
 #resume:hover {
   color: #6be34d;
   border: 0.2px solid #fff;
+}
+
+.about-des li {
+  text-decoration: none;
+}
+
+.more-info li {
+  list-style: none;
+}
+
+.more-info a {
+  text-decoration: none;
+  color: white;
+  margin: 10px;
 }
 
 .container p {
@@ -161,9 +175,9 @@ nav a:hover {
   cursor: pointer;
 }
 
-.education {
+/* .education {
   margin: 94px 0px;
-}
+} */
 
 #tools {
   color: gray;
