@@ -7,20 +7,21 @@
   <title>Saeed Hassan | Web Developer </title>
   <link rel="icon" href="./images/Frame 2@3x.png" type="image/jpeg" />
   <link rel="stylesheet" href="./css/all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/jquery-3.5.1.min.js"></script>
   <script src="./js/popper.min.js"></script>
   <script src="./js/bootstrap.min.js"></script>
-  <script src="./js/jquery-3.5.1.min.js"></script>
   <script src="./js/all.min.js"></script>
 </head>
 
 <body>
 
   <!-- navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light">
+  <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="./images/Frame 2@3x.png" width="80" alt=""></a>
+      <a class="navbar-brand" href="#"><img src="./images/Frame 2@3x.png"  alt="logo not found" id="logo"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id='toggle-button'>
         <span class="navbar-toggler-icon"></span>
@@ -39,18 +40,16 @@
   </nav>
 
 
-  <!--  -->
-  <div class="container">
-    <div class="row mt-3" id="intro-section">
-      <div class="col-md-11 col-sm-6 header">
+  <!-- Intro Section  -->
+  <div class="container" >
+    <div class="row" id="intro-section">
+      <div class="col-md-11 header">
         <p>Hi, Iam </p>
         <h1>Saeed Hassan </h1>
         <h2>I build things for the web.</h2>
-
-        <div class="email mt-3 ml-5">
+        <div class="email ">
           <a href="mailto:saeedhassansolangi@gmail.com">Get in touch </a>
         </div>
-
       </div>
 
       <div class="col-md-1" id="new">
@@ -83,38 +82,42 @@
     </div>
 
 
-    <div class="about mt-5" >
+    <!-- About Section -->
+    <div class="about" >
       <h3 id="about" id="about-header">About</h3>
-
       <div class="row">
-        <div class="col-md-4" id="above">
+        <div class="col-md-5">
           <img src="./images/saeedhassan.jpeg" alt="" class="img-fluid">
         </div>
 
-        <div class="col-md-7" style="margin: 20px;">
+        <div class="col-md-7" style="margin-top: 80px;">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam error soluta temporibus, hic accusamus
             beatae, repellat sed, sapiente autem tempora cum culpa dignissimos ratione minus ducimus. Possimus corrupti
             numquam nihil.
           </p>
+        </div>
+      </div>
+    </div>
 
+    <div class="skills">
+      <h3 >Skills</h3>
+      <div class="row">
+        <div class="col-md-12">
           <div class="skills">
-            <h4 style="border-bottom: white 2px solid; display: inline;">Skills</h4>
 
-            <div class="frontend-skills mt-3">
+            <div class="frontend-skills">
               <h6>Frontend Skills</h6>
               <p>Html, Css ,Bootstrap, Javacript, Reactjs</p>
             </div>
 
-            <div class="backend-skills mt-3">
+            <div class="backend-skills">
               <h6>Backend Skills</h6>
               <p>Nodejs , Deno , Express , Oak, Mongoose , Mongodb</p>
             </div>
           </div>
-
         </div>
 
       </div>
-
     </div>
 
 
@@ -122,29 +125,28 @@
     <div class="education" id="education">
 
       <h3 id="education-header">Education</h3>
-      <div class="row mt-5">
+      <div class="row">
 
         <div class="col-md-8">
 
           <h4>Mehran University of Engineering and Technology, Jamshoro </h3>
 
-
         </div>
 
         <div class="col-md-2">
-          <img src="./images/muet_logo.png" alt="image not found">
+          <img src="./images/muet_logo.png" width="200" alt="image not found">
         </div>
 
       </div>
 
-      <div class="row mt-5">
+      <div class="row">
 
         <div class="col-md-8">
           <h4>Sunny Bright High School Dadu</h3>
         </div>
 
         <div class="col-md-2">
-          <img src="./images/Sunny Bright Academy Logo.jpg" width="100" id="images" alt="image not found">
+          <img src="./images/Sunny Bright Academy Logo.jpg" width="60" height="60"  id="images" alt="image not found">
         </div>
 
       </div>
@@ -153,10 +155,10 @@
     </div>
 
 
-    <div class="portfolio mt-5" id="portfolio">
+    <div class="portfolio" id="portfolio">
 
       <h3 id="portfolio-header">Portfolio</h3>
-      <div class="col-md-12 mt-5">
+      <div class="col-md-12">
         <div class="card mb-3" class="cards" style="background-color: #172a45;">
           <div class="row g-0">
             <div class="col-md-8">

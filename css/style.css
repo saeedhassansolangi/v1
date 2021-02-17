@@ -1,21 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@1,500;1,700&display=swap');
 * {
-  font-family: 'Alegreya', serif;
+  font-family: 'Quicksand', sans-serif;
   font-size: 18px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 300;
 }
 
 body {
-  background-color: #020c1b;
-  color: #e6f1ff;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
 }
 
 nav a {
-  color: #6be34d !important;
+  color: #fff !important;
 }
 
 nav a:hover {
-  color: white !important;
+  color: #6be34d !important;
 }
+
+#logo {
+  width: 80px;
+}
+
+.email {
+  margin-left: 11px;
+  margin-top: 40px;
+}
+
+.col-md-11.header {
+  margin: 10px auto;
+}
+
+#intro-section {
+  height: auto !important;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
 .header p {
   letter-spacing: 0.2em;
   text-transform: capitalize;
@@ -69,10 +99,6 @@ nav a:hover {
   box-shadow: 1px 1px 1.5px white;
 }
 
-#intro-section {
-  height: 70vh;
-}
-
 #about-header,
 #education-header,
 #portfolio-header,
@@ -86,12 +112,8 @@ nav a:hover {
 .about img {
   max-width: 100%;
   height: auto;
-  opacity: 0.7;
-  border-radius: 100%;
-}
-
-.about {
-  height: 100vh;
+  opacity: 1;
+  border-radius: 50px;
 }
 
 .education h3 {
@@ -99,12 +121,32 @@ nav a:hover {
 }
 
 @media (max-width: 768px) {
+  * {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+  }
+
+  .col-md-11.header {
+    margin: 20px 10px auto;
+  }
+
+  .email {
+    margin-left: 0px;
+    margin-top: 20px;
+  }
+
+  #about {
+    margin: 5px 20px;
+    font-size: 40px;
+  }
   h1 {
-    font-size: 70px !important;
+    font-size: 50px !important;
   }
 
   h2 {
-    font-size: 40px !important;
+    font-size: 30px !important;
   }
   .nav-item {
     display: none;
@@ -122,11 +164,6 @@ nav a:hover {
 .cards {
   max-width: 100%;
   color: white;
-}
-
-.education h4::before {
-  content: '> ';
-  margin: 10px;
 }
 
 .footer {
