@@ -54,6 +54,14 @@ nav a:hover {
   margin-bottom: 100px;
 }
 
+.education {
+  margin: 188px 0px;
+}
+
+.education .row {
+  margin: 40px 0px;
+}
+
 .header p {
   letter-spacing: 0.2em;
   text-transform: capitalize;
