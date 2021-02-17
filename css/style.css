@@ -24,6 +24,7 @@ h6 {
 #education,
 #portfolio {
   font-size: 50px;
+  margin-bottom: 30px;
 }
 
 nav a {
@@ -62,6 +63,10 @@ nav a:hover {
 #resume {
   border: 0.2px solid #6be34d;
   color: #6be34d;
+}
+
+.about-des {
+  margin: 50px;
 }
 
 #resume:hover {
@@ -185,6 +190,7 @@ nav a:hover {
     margin: 5px 20px;
     font-size: 40px;
   }
+
   h1 {
     font-size: 40px !important;
   }
@@ -193,15 +199,8 @@ nav a:hover {
     font-size: 30px !important;
   }
 
-  #description {
-    margin-top: 2px;
-  }
   #social-links .nav-item {
     display: none;
-  }
-
-  .education {
-    margin-top: 400px !important;
   }
 
   #toggle-button {
