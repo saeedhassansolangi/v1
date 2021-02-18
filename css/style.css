@@ -60,6 +60,10 @@ nav a:hover {
   margin-bottom: 100px;
 }
 
+.education {
+  margin-bottom: 80px;
+}
+
 .education .row {
   margin: 40px 0px;
 }
@@ -207,6 +211,13 @@ a.card-link {
     font-weight: 300;
   }
 
+  #resume {
+    border: none;
+  }
+
+  #resume:hover {
+    border: none;
+  }
   #about,
   #skills,
   #education,
