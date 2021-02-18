@@ -27,9 +27,11 @@ h6 {
 #skills,
 #education,
 #portfolio {
-  font-size: 20px;
+  font-size: 50px;
   margin-bottom: 30px;
 }
+
+/* fontsize:20 */
 
 nav a {
   color: #fff !important;
@@ -207,6 +209,11 @@ a.card-link {
     font-size: 14px;
     color: rgba(255, 255, 255, 0.9);
     font-weight: 300;
+  }
+
+  a.card-link {
+    color: #fff;
+    font-size: 15px;
   }
 
   .col-md-11.header {
