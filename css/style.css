@@ -26,12 +26,12 @@ h6 {
 #about,
 #skills,
 #education,
-#portfolio {
+#portfolio,
+#reachout-header,
+#articles-header {
   font-size: 50px;
   margin-bottom: 30px;
 }
-
-/* fontsize:20 */
 
 nav a {
   color: #fff !important;
@@ -139,16 +139,6 @@ nav a:hover {
   box-shadow: 1px 1px 1.5px white;
 }
 
-#about-header,
-#education-header,
-#portfolio-header,
-#articles-header,
-#reachout-header {
-  display: inline;
-  margin: 5px;
-  border-bottom: 2px solid white;
-}
-
 .about img {
   max-width: 100%;
   height: auto;
@@ -202,6 +192,24 @@ a.card-link {
   color: gray;
 }
 
+#reachout-section ul {
+  list-style-type: none;
+}
+
+#reachout-section li {
+  display: inline;
+}
+
+#reachout-section li a {
+  padding: 10px;
+  color: gray;
+}
+
+#address li {
+  color: gray !important;
+}
+
+
 /* Design For Mo  */
 @media (max-width: 768px) {
   * {
@@ -221,7 +229,9 @@ a.card-link {
   #about,
   #skills,
   #education,
-  #portfolio {
+  #portfolio,
+  #reachout-header,
+  #articles-header {
     font-size: 20px;
   }
 
