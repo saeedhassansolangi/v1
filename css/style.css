@@ -211,6 +211,13 @@ a.card-link {
     font-weight: 300;
   }
 
+  #about,
+  #skills,
+  #education,
+  #portfolio {
+    font-size: 20px;
+  }
+
   a.card-link {
     color: #fff;
     font-size: 15px;
