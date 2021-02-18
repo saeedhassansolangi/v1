@@ -200,15 +200,11 @@ a.card-link {
   display: inline;
 }
 
-#reachout-section li a {
-  padding: 10px;
-  color: gray;
-}
-
+#reachout-section li a,
 #address li {
-  color: gray !important;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.8);
 }
-
 
 /* Design For Mo  */
 @media (max-width: 768px) {
