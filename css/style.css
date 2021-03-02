@@ -175,11 +175,11 @@ nav a:hover {
   box-shadow: 1px 1px 1.5px white;
 }
 
-.about img {
+#portfolio-img {
   max-width: 100%;
   height: auto;
-  opacity: 1;
   border-radius: 10px;
+  opacity: 0.8;
 }
 
 #description {
