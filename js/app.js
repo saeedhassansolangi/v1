@@ -33,4 +33,7 @@ fetch('https://api.github.com/users/saeedhassansolangi/starred')
     });
 
     document.querySelector('#portfolio .row').innerHTML = card;
+  })
+  .catch((error) => {
+    document.querySelector('#portfolio .row').innerHTML = error.message;
   });
