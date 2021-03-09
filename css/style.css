@@ -180,6 +180,11 @@ nav a:hover {
   height: auto;
   border-radius: 10px;
   opacity: 0.8;
+  filter: grayscale(40%);
+}
+
+#portfolio-img:hover {
+  filter: none;
 }
 
 #description {
