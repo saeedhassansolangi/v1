@@ -256,6 +256,10 @@ a.card-link {
     font-weight: 300;
   }
 
+  .my-intro {
+    padding: 10px;
+  }
+
   #resume {
     border: none;
   }
