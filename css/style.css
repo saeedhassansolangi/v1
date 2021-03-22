@@ -251,6 +251,10 @@ a.card-link {
   color: rgba(255, 255, 255, 0.8);
 }
 
+#portfolio-code a {
+  color: white;
+}
+
 /* Design For Mo  */
 @media (max-width: 768px) {
   * {
