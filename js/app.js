@@ -1,3 +1,4 @@
+// make request on github api
 fetch('https://api.github.com/users/saeedhassansolangi/starred')
   .then((response) => {
     return response.json();
