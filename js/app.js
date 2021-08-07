@@ -2,6 +2,7 @@ const loader = document.querySelector('.loader');
 const portfolioSection = document.querySelector('#portfolio .row');
 
 async function loadRepositories() {
+  console.log(window.scrollY);
   loader.style.display = 'block';
   const URL = 'https://github-pinned-repositories.herokuapp.com'
   const response = await fetch(URL);
@@ -121,11 +122,11 @@ const logo = document.querySelector('.navbar-brand')
 const navbar = document.querySelector('.navbar-expand-lg')
 window.addEventListener('scroll', function (e) {
   if (this.scrollY > 0) {
-    logo.style.display = "none";
+    logo.style.width = "40px";
     navbar.style.background = "#201e1e"
   }
   else if (this.scrollY == 0) {
-    logo.style.display = "block";
+    logo.style.width ="60px";
     navbar.style.background = "none"
   }
 })
