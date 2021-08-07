@@ -114,3 +114,17 @@ function createEl(type, attrs = {}) {
 }
 
 window.addEventListener('load', loadRepositories);
+
+
+
+const logo = document.querySelector('.navbar-brand')
+window.addEventListener('scroll', function (e) {
+  if (this.scrollY > 0) {
+    logo.style.display = "none";
+    document.querySelector('.navbar-expand-lg').style.background = "#282828"
+  }
+  else if (this.scrollY == 0) {
+    logo.style.display = "block";
+    document.querySelector('.navbar-expand-lg').style.background = "none"
+  }
+})
