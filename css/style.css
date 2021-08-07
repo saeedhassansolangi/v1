@@ -386,3 +386,7 @@ h3.card-title a:hover {
   color: lightblue !important;
   font-size: 13px;
 }
+
+.card-link:hover {
+  color: rgb(184, 180, 180);
+}

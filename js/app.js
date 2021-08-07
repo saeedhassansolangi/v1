@@ -89,7 +89,7 @@ async function loadRepositories() {
 
     const linkExternal = createEl('a', {
       href: projectLiveURL,
-      class: 'card-link text-right',
+      class: 'card-link',
       target: '_blank',
       innerText: 'View Project Live',
     });
