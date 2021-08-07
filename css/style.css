@@ -255,6 +255,22 @@ a.card-link {
   color: white;
 }
 
+.card.mb-3 {
+  background-color: #201e1e;
+  /* border: rgb(198, 235, 235) solid 1px; */
+  /* border: #6be34d solid 1px; */
+  border-radius: 15px;
+}
+
+.percent{
+  font-size: 11px;
+}
+
+i{
+  color: blue !important;
+  background-color: rgb(83, 155, 245);
+}
+
 /* Design For Mo  */
 @media (max-width: 768px) {
   * {
@@ -325,4 +341,19 @@ a.card-link {
     padding: 5px;
     margin: 5px;
   }
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.topics {
+  color: rgb(83, 155, 245);
+  background-color: #4184e426;
+  border-radius: 2em;
+  padding: 0px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid transparent;
 }

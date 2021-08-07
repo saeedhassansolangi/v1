@@ -1,40 +1,129 @@
-// make request on github api
-fetch('https://api.github.com/users/saeedhassansolangi/starred')
-  .then((response) => {
-    return response.json();
-  })
-  .then((repos) => {
-    let card = repos.map((repo) => {
-      return `
-        <div class="col-md-5">
-          <div class="card mb-3" style="background-color: #272727;">
-              <div class="card-body">
-                <h5 class="card-title">${repo.name.toUpperCase()}</h5>
-                <p class="card-text">${repo.description.slice(0, 50)}...</p>
-                <p class="card-text">
-                <small class="text-muted">Created at ${new Date(
-                  repo.created_at
-                ).toLocaleString()}</small>
-                <small class="text-muted">Last Updated at ${new Date(
-                  repo.updated_at
-                ).toLocaleString()}</small>
-                </p>
-                <div >
-                <a href="${
-                  repo.html_url
-                }" target="_blank"  class="card-link">View Project On Github </a> 
-                <a href="${
-                  repo.homepage
-                }" target="_blank"  class="card-link">View Project Live </a> 
-                </div>
-              </div>
-            </div>
-          
-      </div>`;
+async function loadRepositories() {
+  const response = await fetch(
+    'https://github-pinned-repositories.herokuapp.com'
+  );
+  const repos = await response.json();
+
+  let card = repos.map((repo) => {
+    const {
+      repo_name,
+      repo_description,
+      repo_url,
+      forked_repo_info,
+      starred_repo_info,
+      topics,
+      lang_stats,
+      live_urls,
+    } = repo;
+    const { forked_label } = forked_repo_info;
+    const { starred_label } = starred_repo_info;
+    const [projectLiveURL] = live_urls;
+
+    const anchor = createEl('a', {
+      href: repo_url,
+      target: '_blank',
+      innerText: repo_name,
+    });
+    const div = createEl('div', { class: 'col-md-6' });
+    const div2 = createEl('div', { class: 'card mb-3' });
+    const card_body = createEl('div', { class: 'card-body' });
+    const card_title = createEl('h3', { class: 'card-title' });
+    const card_text = createEl('p', {
+      class: 'card-text',
+      innerText: repo_description || 'no description provided',
     });
 
-    document.querySelector('#portfolio .row').innerHTML = card;
-  })
-  .catch((error) => {
-    document.querySelector('#portfolio .row').innerHTML = error.message;
+    const forkedEl = createEl('small', {
+      class: 'text-muted',
+      innerText: `${forked_label} and ${starred_label} `,
+    });
+
+    const ul = createEl('ul', { class: 'list-inline' });
+    div2.appendChild(card_body);
+    card_title.appendChild(anchor);
+    card_body.appendChild(card_title);
+    card_body.appendChild(card_text);
+    card_body.appendChild(forkedEl);
+
+    // topics
+    topics.forEach((topic) => {
+      card_body.appendChild(
+        createEl('span', {
+          innerText: topic || 'no topics provided',
+          title: `Topic : ${topic}`,
+          class: 'topics m-1',
+        })
+      );
+    });
+
+    // languages used
+    lang_stats.forEach((lang) => {
+      const { lang_name, lang_percentage, lang_color } = lang;
+      const li = createEl('li', { class: 'list-inline-item' });
+
+      const span = createEl('span', { style: 'font-size:12px' });
+      // <i class="fas fa-circle"></i>
+      const i = createEl('i', {
+        style: `color:${lang_color}`,
+        class: 'fas fa-circle fa-xs mr-1',
+      });
+
+      span.appendChild(i);
+      //
+      const spanLang = createEl('span', {
+        innerText: lang_name,
+        style: `color:${lang_color}`,
+        class: 'mr-1',
+      });
+      //
+      const spanPerct = createEl('span', {
+        innerText: lang_percentage,
+        class: 'percent',
+        // style: `color:${lang_color}`,
+      });
+
+      li.appendChild(span);
+      li.appendChild(spanLang);
+      li.appendChild(spanPerct);
+      ul.appendChild(li);
+      card_body.appendChild(ul);
+    });
+    const divLinks = createEl('div', { class: '' });
+
+    const linkGithub = createEl('a', {
+      href: repo_url,
+      class: 'card-link',
+      target: '_blank',
+      innerText: 'View Project On Github',
+    });
+
+    const linkExternal = createEl('a', {
+      href: projectLiveURL,
+      class: 'card-link',
+      target: '_blank',
+      innerText: 'View Project Live',
+    });
+
+    divLinks.appendChild(linkGithub);
+    divLinks.appendChild(linkExternal);
+
+    card_body.appendChild(divLinks);
+
+    div.appendChild(div2);
+
+    const portfolioSection = document.querySelector('#portfolio .row');
+    portfolioSection.append(div);
   });
+}
+
+function createEl(type, attrs = {}) {
+  const el = document.createElement(type);
+  for (const attr in attrs) {
+    const value = attrs[attr];
+    if (attr === 'innerText') el.innerText = value;
+    else el.setAttribute(attr, value);
+  }
+  return el;
+}
+
+window.addEventListener('load', loadRepositories);
