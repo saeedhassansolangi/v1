@@ -31,10 +31,10 @@ async function loadRepositories() {
     const card_textAttrs = {class: 'card-text',innerText: repo_description || 'no description provided'}
     const card_text = createEl('p', {...card_textAttrs});
 
-    const forkedEl = createEl('span', { title:forked_label , class:'forked'});
+    const forkedEl = createEl('span', { title:forked_label, class:'forked'});
     forkedEl.innerHTML = `<i class="fas fa-code-branch" style="font-size:10px"></i> forked | ${forked_count}`;
 
-    const starredEl = createEl('span', {title:starred_label,class:"starred"});
+    const starredEl = createEl('span', {title:starred_label, class:"starred"});
     starredEl.innerHTML = `<i class="far fa-star" style="font-size:10px"></i> starred | ${starred_count}`;
 
     const forkedrep0s = createEl('div', { class: 'repo-meta' });
@@ -89,7 +89,7 @@ async function loadRepositories() {
 
     const linkExternal = createEl('a', {
       href: projectLiveURL,
-      class: 'card-link',
+      class: 'card-link text-right',
       target: '_blank',
       innerText: 'View Project Live',
     });
