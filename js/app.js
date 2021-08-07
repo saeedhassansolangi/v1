@@ -118,13 +118,14 @@ window.addEventListener('load', loadRepositories);
 
 
 const logo = document.querySelector('.navbar-brand')
+const navbar = document.querySelector('.navbar-expand-lg')
 window.addEventListener('scroll', function (e) {
   if (this.scrollY > 0) {
     logo.style.display = "none";
-    document.querySelector('.navbar-expand-lg').style.background = "#282828"
+    navbar.style.background = "#201e1e"
   }
   else if (this.scrollY == 0) {
     logo.style.display = "block";
-    document.querySelector('.navbar-expand-lg').style.background = "none"
+    navbar.style.background = "none"
   }
 })
