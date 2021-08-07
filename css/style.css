@@ -390,3 +390,9 @@ h3.card-title a:hover {
 .card-link:hover {
   color: rgb(184, 180, 180);
 }
+
+.skills i {
+  font-size: 50px;
+  margin: 5px;
+  padding: 5px;
+}
