@@ -362,9 +362,27 @@ a {
   font-size: 12px;
 }
 
+.repo-meta {
+  text-align: justify;
+}
+
 .forked,
 .starred {
-  background-color: #2b2727;
+  background-color: #302929;
   border-radius: 10px;
-  padding: 0px 15px;
+  padding: 0px 10px;
+}
+
+h3.card-title a {
+  color: lightblue;
+  font-size: 25px;
+}
+
+h3.card-title a:hover {
+  color: white;
+}
+
+.card-text {
+  color: lightblue !important;
+  font-size: 13px;
 }

@@ -65,11 +65,7 @@ async function loadRepositories() {
       const { lang_name, lang_percentage, lang_color } = lang;
       const li = createEl('li', { class: 'list-inline-item' });
       const span = createEl('span', { style: `color:${lang_color}` });
-      const i = createEl('i', {
-        style: `color:${lang_color} !important`,
-        class: 'fas fa-circle fa-xs mr-1',
-      });
-
+      const i = createEl('i', {style: `color:${lang_color} !important`, class: 'fas fa-circle fa-xs mr-1'});
       span.appendChild(i);
       //
       const spanLang = createEl('span', {innerText: lang_name, class: 'mr-1'});
@@ -93,7 +89,7 @@ async function loadRepositories() {
 
     const linkExternal = createEl('a', {
       href: projectLiveURL,
-      class: 'card-link ',
+      class: 'card-link',
       target: '_blank',
       innerText: 'View Project Live',
     });
