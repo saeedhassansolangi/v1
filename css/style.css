@@ -216,7 +216,7 @@ nav a:hover {
 .skills svg {
   font-size: 80px;
   padding: 10px;
-  margin: 10px;
+  margin: 120px;
 }
 
 .skills svg:hover {
@@ -257,8 +257,6 @@ a.card-link {
 
 .card.mb-3 {
   background-color: #201e1e;
-  /* border: rgb(198, 235, 235) solid 1px; */
-  /* border: #6be34d solid 1px; */
   border-radius: 15px;
 }
 
@@ -269,7 +267,6 @@ a.card-link {
 .loader {
   width: 100%;
   text-align: center;
-  background-color: none;
 }
 
 /* Design For Mo  */
