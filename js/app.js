@@ -84,7 +84,6 @@ async function loadRepositories() {
       const spanPerct = createEl('span', {
         innerText: lang_percentage,
         class: 'percent',
-        // style: `color:${lang_color}`,
       });
 
       li.appendChild(span);

@@ -272,10 +272,6 @@ a.card-link {
   background-color: none;
 }
 
-.db-color {
-  color: blue;
-}
-
 /* Design For Mo  */
 @media (max-width: 768px) {
   * {
