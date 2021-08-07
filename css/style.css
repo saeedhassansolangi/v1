@@ -262,13 +262,18 @@ a.card-link {
   border-radius: 15px;
 }
 
-.percent{
+.percent {
   font-size: 11px;
 }
 
-i{
-  color: blue !important;
-  background-color: rgb(83, 155, 245);
+.loader {
+  width: 100%;
+  text-align: center;
+  background-color: none;
+}
+
+.db-color {
+  color: blue;
 }
 
 /* Design For Mo  */

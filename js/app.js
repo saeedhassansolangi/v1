@@ -1,10 +1,14 @@
+const loader = document.querySelector('.loader');
+const portfolioSection = document.querySelector('#portfolio .row');
+
 async function loadRepositories() {
+  loader.style.display = 'block';
   const response = await fetch(
     'https://github-pinned-repositories.herokuapp.com'
   );
   const repos = await response.json();
 
-  let card = repos.map((repo) => {
+  repos.map((repo) => {
     const {
       repo_name,
       repo_description,
@@ -15,6 +19,7 @@ async function loadRepositories() {
       lang_stats,
       live_urls,
     } = repo;
+
     const { forked_label } = forked_repo_info;
     const { starred_label } = starred_repo_info;
     const [projectLiveURL] = live_urls;
@@ -39,6 +44,7 @@ async function loadRepositories() {
     });
 
     const ul = createEl('ul', { class: 'list-inline' });
+
     div2.appendChild(card_body);
     card_title.appendChild(anchor);
     card_body.appendChild(card_title);
@@ -61,10 +67,10 @@ async function loadRepositories() {
       const { lang_name, lang_percentage, lang_color } = lang;
       const li = createEl('li', { class: 'list-inline-item' });
 
-      const span = createEl('span', { style: 'font-size:12px' });
+      const span = createEl('span', { style: `color:${lang_color}` });
       // <i class="fas fa-circle"></i>
       const i = createEl('i', {
-        style: `color:${lang_color}`,
+        style: `color:${lang_color} !important`,
         class: 'fas fa-circle fa-xs mr-1',
       });
 
@@ -72,7 +78,6 @@ async function loadRepositories() {
       //
       const spanLang = createEl('span', {
         innerText: lang_name,
-        style: `color:${lang_color}`,
         class: 'mr-1',
       });
       //
@@ -99,7 +104,7 @@ async function loadRepositories() {
 
     const linkExternal = createEl('a', {
       href: projectLiveURL,
-      class: 'card-link',
+      class: 'card-link ',
       target: '_blank',
       innerText: 'View Project Live',
     });
@@ -111,8 +116,8 @@ async function loadRepositories() {
 
     div.appendChild(div2);
 
-    const portfolioSection = document.querySelector('#portfolio .row');
     portfolioSection.append(div);
+    loader.style.display = 'none';
   });
 }
 
