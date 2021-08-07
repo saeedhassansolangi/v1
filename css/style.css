@@ -355,3 +355,16 @@ a {
   font-weight: 500;
   border: 1px solid transparent;
 }
+
+.forked,
+.starred {
+  margin: 5px;
+  font-size: 12px;
+}
+
+.forked,
+.starred {
+  background-color: #2b2727;
+  border-radius: 10px;
+  padding: 0px 15px;
+}

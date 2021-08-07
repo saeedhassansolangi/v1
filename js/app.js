@@ -20,28 +20,27 @@ async function loadRepositories() {
       live_urls,
     } = repo;
 
-    const { forked_label } = forked_repo_info;
-    const { starred_label } = starred_repo_info;
+    const { forked_label, forked_count } = forked_repo_info;
+    const { starred_label, starred_count } = starred_repo_info;
     const [projectLiveURL] = live_urls;
 
-    const anchor = createEl('a', {
-      href: repo_url,
-      target: '_blank',
-      innerText: repo_name,
-    });
+    const anchor = createEl('a', { href: repo_url, target: '_blank', innerText: repo_name })
     const div = createEl('div', { class: 'col-md-6' });
     const div2 = createEl('div', { class: 'card mb-3' });
     const card_body = createEl('div', { class: 'card-body' });
     const card_title = createEl('h3', { class: 'card-title' });
-    const card_text = createEl('p', {
-      class: 'card-text',
-      innerText: repo_description || 'no description provided',
-    });
+    const card_textAttrs = {class: 'card-text',innerText: repo_description || 'no description provided'}
+    const card_text = createEl('p', {...card_textAttrs});
 
-    const forkedEl = createEl('small', {
-      class: 'text-muted',
-      innerText: `${forked_label} and ${starred_label} `,
-    });
+    const forkedEl = createEl('span', { title:forked_label , class:'forked'});
+    forkedEl.innerHTML = `<i class="fas fa-code-branch" style="font-size:10px"></i> forked | ${forked_count}`;
+
+    const starredEl = createEl('span', {title:starred_label,class:"starred"});
+    starredEl.innerHTML = `<i class="far fa-star" style="font-size:10px"></i> starred | ${starred_count}`;
+
+    const forkedrep0s = createEl('div', { class: 'repo-meta' });
+    forkedrep0s.appendChild(forkedEl);
+    forkedrep0s.appendChild(starredEl);
 
     const ul = createEl('ul', { class: 'list-inline' });
 
@@ -49,7 +48,7 @@ async function loadRepositories() {
     card_title.appendChild(anchor);
     card_body.appendChild(card_title);
     card_body.appendChild(card_text);
-    card_body.appendChild(forkedEl);
+    card_body.appendChild(forkedrep0s);
 
     // topics
     topics.forEach((topic) => {
