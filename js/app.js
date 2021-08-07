@@ -3,9 +3,8 @@ const portfolioSection = document.querySelector('#portfolio .row');
 
 async function loadRepositories() {
   loader.style.display = 'block';
-  const response = await fetch(
-    'https://github-pinned-repositories.herokuapp.com'
-  );
+  const URL = 'https://github-pinned-repositories.herokuapp.com'
+  const response = await fetch(URL);
   const repos = await response.json();
 
   repos.map((repo) => {
@@ -65,9 +64,7 @@ async function loadRepositories() {
     lang_stats.forEach((lang) => {
       const { lang_name, lang_percentage, lang_color } = lang;
       const li = createEl('li', { class: 'list-inline-item' });
-
       const span = createEl('span', { style: `color:${lang_color}` });
-      // <i class="fas fa-circle"></i>
       const i = createEl('i', {
         style: `color:${lang_color} !important`,
         class: 'fas fa-circle fa-xs mr-1',
@@ -75,15 +72,8 @@ async function loadRepositories() {
 
       span.appendChild(i);
       //
-      const spanLang = createEl('span', {
-        innerText: lang_name,
-        class: 'mr-1',
-      });
-      //
-      const spanPerct = createEl('span', {
-        innerText: lang_percentage,
-        class: 'percent',
-      });
+      const spanLang = createEl('span', {innerText: lang_name, class: 'mr-1'});
+      const spanPerct = createEl('span', {innerText: lang_percentage,class: 'percent'});
 
       li.appendChild(span);
       li.appendChild(spanLang);
@@ -91,6 +81,7 @@ async function loadRepositories() {
       ul.appendChild(li);
       card_body.appendChild(ul);
     });
+
     const divLinks = createEl('div', { class: '' });
 
     const linkGithub = createEl('a', {
@@ -109,11 +100,8 @@ async function loadRepositories() {
 
     divLinks.appendChild(linkGithub);
     divLinks.appendChild(linkExternal);
-
     card_body.appendChild(divLinks);
-
     div.appendChild(div2);
-
     portfolioSection.append(div);
     loader.style.display = 'none';
   });
