@@ -121,7 +121,7 @@ window.addEventListener('load', loadRepositories);
 const navbar = document.querySelector('.navbar-expand-lg')
 window.addEventListener('scroll', function (e) {
   if (this.scrollY > 0) {
-    navbar.style.background = "#201e1e"
+    navbar.style.background = "#121212"
   }
   else if (this.scrollY == 0) {
     navbar.style.background = "none"
