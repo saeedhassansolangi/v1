@@ -332,6 +332,8 @@ a.card-link {
 
   #toggle-button {
     background-color: #6be34d !important;
+    outline: none;
+    border: none;
   }
 
   .skills svg {
