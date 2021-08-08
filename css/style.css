@@ -82,7 +82,7 @@ nav a:hover {
 }
 
 #logo {
-  width: 50px;
+  width: 30px;
 }
 
 .email {
@@ -331,7 +331,7 @@ a.card-link {
   }
 
   #toggle-button {
-    background-color: #101c2e;
+    background-color: #6be34d !important;
   }
 
   .skills svg {
