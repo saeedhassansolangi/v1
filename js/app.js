@@ -4,9 +4,11 @@ const portfolioSection = document.querySelector('#portfolio .row');
 async function loadRepositories() {
   console.log(window.scrollY);
   loader.style.display = 'block';
-  const URL = 'https://github-pinned-repositories.herokuapp.com'
+  const URL = 'https://github-pinned-repositories.herokuapp.com';
   const response = await fetch(URL);
   const repos = await response.json();
+
+  console.log(repos);
 
   repos.map((repo) => {
     const {
@@ -24,18 +26,28 @@ async function loadRepositories() {
     const { starred_label, starred_count } = starred_repo_info;
     const [projectLiveURL] = live_urls;
 
-    const anchor = createEl('a', { href: repo_url, target: '_blank', innerText: repo_name })
+    const anchor = createEl('a', {
+      href: repo_url,
+      target: '_blank',
+      innerText: repo_name,
+    });
     const div = createEl('div', { class: 'col-md-6' });
     const div2 = createEl('div', { class: 'card mb-3' });
     const card_body = createEl('div', { class: 'card-body' });
     const card_title = createEl('h3', { class: 'card-title' });
-    const card_textAttrs = {class: 'card-text',innerText: repo_description || 'no description provided'}
-    const card_text = createEl('p', {...card_textAttrs});
+    const card_textAttrs = {
+      class: 'card-text',
+      innerText: repo_description || 'no description provided',
+    };
+    const card_text = createEl('p', { ...card_textAttrs });
 
-    const forkedEl = createEl('span', { title:forked_label, class:'forked'});
+    const forkedEl = createEl('span', { title: forked_label, class: 'forked' });
     forkedEl.innerHTML = `<i class="fas fa-code-branch" style="font-size:10px"></i> forked | ${forked_count}`;
 
-    const starredEl = createEl('span', {title:starred_label, class:"starred"});
+    const starredEl = createEl('span', {
+      title: starred_label,
+      class: 'starred',
+    });
     starredEl.innerHTML = `<i class="far fa-star" style="font-size:10px"></i> starred | ${starred_count}`;
 
     const forkedrep0s = createEl('div', { class: 'repo-meta' });
@@ -66,11 +78,20 @@ async function loadRepositories() {
       const { lang_name, lang_percentage, lang_color } = lang;
       const li = createEl('li', { class: 'list-inline-item' });
       const span = createEl('span', { style: `color:${lang_color}` });
-      const i = createEl('i', {style: `color:${lang_color} !important`, class: 'fas fa-circle fa-xs mr-1'});
+      const i = createEl('i', {
+        style: `color:${lang_color} !important`,
+        class: 'fas fa-circle fa-xs mr-1',
+      });
       span.appendChild(i);
       //
-      const spanLang = createEl('span', {innerText: lang_name, class: 'mr-1'});
-      const spanPerct = createEl('span', {innerText: lang_percentage,class: 'percent'});
+      const spanLang = createEl('span', {
+        innerText: lang_name,
+        class: 'mr-1',
+      });
+      const spanPerct = createEl('span', {
+        innerText: lang_percentage,
+        class: 'percent',
+      });
 
       li.appendChild(span);
       li.appendChild(spanLang);
@@ -116,14 +137,11 @@ function createEl(type, attrs = {}) {
 
 window.addEventListener('load', loadRepositories);
 
-
-
-const navbar = document.querySelector('.navbar-expand-lg')
+const navbar = document.querySelector('.navbar-expand-lg');
 window.addEventListener('scroll', function (e) {
   if (this.scrollY > 0) {
-    navbar.style.background = "#121212"
+    navbar.style.background = '#121212';
+  } else if (this.scrollY == 0) {
+    navbar.style.background = 'none';
   }
-  else if (this.scrollY == 0) {
-    navbar.style.background = "none"
-  }
-})
+});

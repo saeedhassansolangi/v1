@@ -398,3 +398,7 @@ h3.card-title a:hover {
   margin: 5px;
   padding: 5px;
 }
+
+.nav-link:hover i {
+  color: #6be34d;
+}
