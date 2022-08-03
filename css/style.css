@@ -264,7 +264,7 @@ a.card-link {
 .card.mb-3 {
   background-color: #201e1e;
   border-radius: 15px;
-  box-shadow: 0.5px 0.5px 2px 2px #ccd6f6;
+  /* box-shadow: 0.5px 0.5px 2px 2px #ccd6f6; */
   cursor: pointer;
 }
 
