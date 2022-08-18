@@ -8,10 +8,29 @@ async function loadRepositories() {
   const {
     data: {
       user: {
+        name,
+        company,
+        email,
+        websiteUrl,
         pinnedItems: { nodes: repos },
       },
     },
   } = await response.json();
+
+  const details = {
+    name,
+    email,
+    education: company,
+    portfolio: websiteUrl,
+  };
+
+  document.querySelector(
+    ".more-info"
+  ).innerHTML += `<pre class="json"><code >${JSON.stringify(
+    details,
+    null,
+    4
+  )}</code></pre>`;
 
   repos.map((repo) => {
     const {
@@ -36,7 +55,9 @@ async function loadRepositories() {
     const card_title = createEl("h3", { class: "card-title" });
     const card_textAttrs = {
       class: "card-text",
-      innerText: repo_description || "no description provided",
+      innerText: repo_description
+        ? repo_description.substr(0, 60) + "..."
+        : "no description",
     };
     const card_text = createEl("p", { ...card_textAttrs });
 
@@ -94,7 +115,7 @@ async function loadRepositories() {
       card_body.appendChild(ul);
     });
 
-    const divLinks = createEl("div", { class: "" });
+    const divLinks = createEl("div", { class: "btns_url" });
 
     const linkGithub = createEl("a", {
       href: repo_url,

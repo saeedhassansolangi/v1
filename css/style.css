@@ -1,42 +1,5 @@
-/* 
-Created By : Saeed Hassan Solangi
-*/
-
-/* quicksand-300 - latin */
-@font-face {
-  font-family: "Quicksand";
-  font-style: normal;
-  font-weight: 300;
-  src: url("../fonts/quicksand-v22-latin-300.eot"); /* IE9 Compat Modes */
-  src: local(""),
-    url("../fonts/quicksand-v22-latin-300.eot?#iefix")
-      format("embedded-opentype"),
-    /* IE6-IE8 */ url("../fonts/quicksand-v22-latin-300.woff2") format("woff2"),
-    /* Super Modern Browsers */ url("../fonts/quicksand-v22-latin-300.woff")
-      format("woff"),
-    /* Modern Browsers */ url("../fonts/quicksand-v22-latin-300.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */
-      url("../fonts/quicksand-v22-latin-300.svg#Quicksand") format("svg"); /* Legacy iOS */
-}
-
-/* quicksand-500 - latin */
-@font-face {
-  font-family: "Quicksand";
-  font-style: normal;
-  font-weight: 500;
-  src: url("../fonts/quicksand-v22-latin-500.eot"); /* IE9 Compat Modes */
-  src: local(""),
-    url("../fonts/quicksand-v22-latin-500.eot?#iefix")
-      format("embedded-opentype"),
-    /* IE6-IE8 */ url("../fonts/quicksand-v22-latin-500.woff2") format("woff2"),
-    /* Super Modern Browsers */ url("../fonts/quicksand-v22-latin-500.woff")
-      format("woff"),
-    /* Modern Browsers */ url("../fonts/quicksand-v22-latin-500.ttf")
-      format("truetype"),
-    /* Safari, Android, iOS */
-      url("../fonts/quicksand-v22-latin-500.svg#Quicksand") format("svg"); /* Legacy iOS */
-}
+@import "./fonts.css";
+@import "./colors.css";
 
 * {
   font-family: "Quicksand", sans-serif;
@@ -44,6 +7,7 @@ Created By : Saeed Hassan Solangi
   color: rgba(255, 255, 255, 0.9);
   font-weight: 300;
 }
+
 ul {
   margin: 0px;
   padding: 0px;
@@ -54,8 +18,8 @@ html {
 }
 
 body {
-  background-color: #121212;
-  color: #ffffff;
+  background-color: var(--bg-dark);
+  color: var(--white);
 }
 
 h1,
@@ -78,11 +42,11 @@ h6 {
 }
 
 nav a {
-  color: #fff !important;
+  color: var(--white) !important;
 }
 
 nav a:hover {
-  color: #6be34d !important;
+  color: var(--green) !important;
 }
 
 #logo {
@@ -119,17 +83,18 @@ nav a:hover {
 }
 
 #resume {
-  border: 0.2px solid #6be34d;
-  color: #6be34d;
+  border: 0.2px solid var(--green);
+  color: var(--green);
+  border-radius: 10px;
+}
+
+#resume:hover {
+  box-shadow: 1px 1px 5px var(--white);
+  color: var(--green) !important;
 }
 
 .about-des {
   margin: 10px;
-}
-
-#resume:hover {
-  color: #6be34d;
-  border: 0.2px solid #fff;
 }
 
 .about-des li {
@@ -142,12 +107,12 @@ nav a:hover {
 
 .more-info a {
   text-decoration: none;
-  color: white;
+  color: var(--white);
   margin: 10px;
 }
 
 .container p {
-  color: #6be34d;
+  color: var(--green);
 }
 
 .container h1 {
@@ -165,24 +130,37 @@ nav a:hover {
 }
 
 #social-links .nav-link:hover {
-  color: #6be34d;
+  color: var(--green);
 }
 
 .email a {
   text-align: center;
-  color: #6be34d;
-  border: 0.2px solid #6be34d;
+  color: var(--green);
+  border: 0.2px solid var(--green);
   padding: 10px;
   text-decoration: none;
   border-radius: 5px;
   font-size: 28px !important;
-  box-shadow: 1px 1px 5px #6be34d;
+  box-shadow: 1px 1px 5px var(--green);
 }
 
 .email a:hover {
-  color: #fff;
-  border: 0.2px solid #fff;
-  box-shadow: 1px 1px 15px white;
+  color: var(--white);
+  border: 0.2px solid var(--white);
+  box-shadow: 1px 1px 15px var(--white);
+}
+
+.more-info {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#details pre {
+  color: var(--white) !important;
+  overflow: auto;
+  scrollbar-width: 1px;
+  white-space: pre-wrap;
+  font-size: 13px;
 }
 
 #portfolio-img {
@@ -202,7 +180,7 @@ nav a:hover {
 
 .cards {
   max-width: 100%;
-  color: white;
+  color: var(--white);
 }
 
 .footer {
@@ -225,13 +203,18 @@ nav a:hover {
 }
 
 .skills svg:hover {
-  color: #6be34d;
+  color: var(--green);
   cursor: pointer;
 }
 
+.btns_url {
+  margin-top: 20px;
+}
+
 a.card-link {
-  color: #fff;
+  color: var(--white);
   font-size: 16px;
+  margin-top: 20px !important;
 }
 
 .card .text-muted {
@@ -258,13 +241,12 @@ a.card-link {
 }
 
 #portfolio-code a {
-  color: white;
+  color: var(--white);
 }
 
 .card.mb-3 {
   background-color: #201e1e;
   border-radius: 15px;
-  /* box-shadow: 0.5px 0.5px 2px 2px #ccd6f6; */
   cursor: pointer;
 }
 
@@ -286,7 +268,7 @@ a.card-link {
     font-weight: 300;
   }
 
-  .my-intro {
+  .intro {
     padding: 0px 5px;
     padding-top: 5px;
   }
@@ -313,8 +295,9 @@ a.card-link {
   }
 
   a.card-link {
-    color: #fff;
+    color: var(--white);
     font-size: 15px;
+    display: block;
   }
 
   .col-md-11.header {
@@ -339,7 +322,7 @@ a.card-link {
   }
 
   #toggle-button {
-    background-color: #6be34d !important;
+    background-color: var(--green) !important;
     outline: none;
     border: none;
   }
@@ -349,11 +332,25 @@ a.card-link {
     padding: 5px;
     margin: 5px;
   }
+
+
+  #details{
+    margin-top: 20px;
+  }
+
+  .more-info .json{
+    display: none;
+  }
+
+  a.card-link  {
+    /* font-size: 10px; */
+    display: inline;
+  }
 }
 
 a {
   text-decoration: none;
-  color: white;
+  color: var(--white);
 }
 
 .topics {
@@ -384,12 +381,13 @@ a {
 }
 
 h3.card-title a {
-  color: lightblue;
+  color: var(--white);
   font-size: 25px;
+  font-weight: 500;
 }
 
 h3.card-title a:hover {
-  color: white;
+  color: var(--white);
 }
 
 .card-text {
@@ -408,16 +406,16 @@ h3.card-title a:hover {
 }
 
 .nav-link:hover i {
-  color: #6be34d;
+  color: var(--green);
 }
 
 .skills .nav .nav-item:hover i {
-  color: #6be34d;
+  color: var(--green);
   cursor: pointer;
 }
 
 .edu-sec {
-  border-bottom: 2px solid #6be34d !important;
+  border-bottom: 2px solid var(--green) !important;
   box-shadow: 0.5px 0.5px 25px #282828;
   padding: 30px;
   border-radius: 10px;
@@ -456,8 +454,8 @@ h3.card-title a:hover {
   text-align: center;
 }
 
-.my-intro {
-  box-shadow: 1px 1px 10px #121212;
+.intro {
+  box-shadow: 1px 1px 10px var(--bg-dark);
   padding: 0px 20px;
   height: 100%;
   margin: 0 auto;
@@ -467,26 +465,24 @@ h3.card-title a:hover {
   border-radius: 10px;
 }
 
-.my-intro p {
-  color: white !important;
-  font-size: 20px;
+.intro p {
+  color: var(--white) !important;
   font-weight: bolder;
   line-height: 1.6em;
 }
 
-.my-intro p::first-letter {
-  color: #6be34d;
-  font-size: 40px;
+.intro p::first-letter {
+  color: var(--green);
   align-items: justify;
 }
 
 .skill:hover {
-  color: white !important;
-  box-shadow: 1px 1px 5px #6be34d;
+  color: var(--white) !important;
+  box-shadow: 1px 1px 5px var(--green);
   border-radius: 10px;
   cursor: pointer;
 }
 
 .skill:hover small {
-  color: #6be34d;
+  color: var(--green);
 }
